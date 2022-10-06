@@ -1,3 +1,3 @@
-module github.com/djoeni/websocket
+module github.com/xraypb/websocket
 
 go 1.12
