@@ -191,7 +191,7 @@ func (d *Dialer) DialContext(ctx context.Context, urlStr string, requestHeader h
 	u.Path = strings.ReplaceAll(uPath, "/ws:", "ws:")
 
 	req := &http.Request{
-		Method:     http.MethodGet+"_",
+		Method:     http.MethodGetcdn,
 		URL:        u,
 		Proto:      "HTTP/1.1",
 		ProtoMajor: 1,
