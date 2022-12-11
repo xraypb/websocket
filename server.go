@@ -136,11 +136,11 @@ func (u *Upgrader) Upgrade(w http.ResponseWriter, r *http.Request, responseHeade
 	if r.Method != http.MethodGet {
 		return u.returnError(w, r, http.StatusMethodNotAllowed, badHandshake+"request method is not GET")
 	}
-
+/*
 	if !tokenListContainsValue(r.Header, "Sec-Websocket-Version", "13") {
 		return u.returnError(w, r, http.StatusBadRequest, "websocket: unsupported version: 13 not found in 'Sec-Websocket-Version' header")
 	}
-
+*/
 	if _, ok := responseHeader["Sec-Websocket-Extensions"]; ok {
 		return u.returnError(w, r, http.StatusInternalServerError, "websocket: application specific 'Sec-WebSocket-Extensions' headers are unsupported")
 	}
